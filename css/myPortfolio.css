@@ -1,0 +1,250 @@
+/* Desktop layout */
+/* cursor: pointer;
+transition: 5s;
+:hover{} */
+*{
+    padding: 0;
+}
+nav,footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:10px;
+    /* width:100%; */
+}
+
+.nav-links{
+    list-style-type: none;
+    display: flex; 
+    gap: 10px;
+}
+/* body{
+    background-color:grey;
+} */
+
+/* nav-item, gap: */
+a{
+    font-size: 20px;
+    text-decoration:none; 
+}
+/* make it for nav-item */
+.nav-item{ 
+    font-weight:500 !important;
+    color: white; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.7s ease;
+    margin-right: 10px;
+}
+.nav-item:hover{
+    color:grey;
+}
+.logo{
+    font-size: 30pt;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.logo1{
+    font-style: italic;
+}
+p{
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+h2,h3{
+    font-family:Arial;
+}
+.introductory{
+    display:flex;
+    background:linear-gradient(90deg,white,grey);
+    border-top-right-radius:25px ;
+    border-top-left-radius:25px ;
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    box-shadow:5px 3px grey;
+    margin-top:5px
+}
+.introductory_image{
+    border-radius: 50% ;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin-top: 3vh;
+    margin-left: -40px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.span::after{
+    content: "K. Richard Wilson";
+    color:grey;
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    
+}
+
+@keyframes animate {
+    5% {
+        content: " | ";
+    }
+    
+    10%{
+        content: "K |";
+    }
+    15%{
+        content: "K. |";
+    }
+    20%{
+        content: "K. R|";
+    }
+    25%{
+        content: "K. Ri|";
+    }
+    30%{
+        content: "K. Ric|";
+    }
+    35%{
+        content: "K. Rich|";
+    }
+    40%{
+        content: "K. Richa|";
+    }
+    45%{
+        content: "K. Richar|";
+    }
+    50%{
+        content: "K. Richard|";
+    }
+    55%{
+        content: "K. Richard W|";
+    }
+    60%{
+        content: "K. Richard Wi|";
+    }
+    65%{
+        content: "K. Richard Wil|";
+    }
+    70%{
+        content: "K. Richard Wils|";
+    }
+    75% {
+        content: "K. Richard Wilso|";
+    }
+    80%{
+        content: "K. Richard Wilson|";
+    }
+}
+.projectsbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project{
+    padding: 0px 30px 0px 30px;
+    border-top-right-radius:25px ;
+    border-top-left-radius:25px ;
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    box-shadow:5px 3px grey;
+    margin-top:10px;
+}
+.button{
+    background-color: black;
+    border-radius: 20px;
+    color:white;
+    height: 25px;
+    margin-bottom: 5px;
+
+}
+.icon{
+    width:40px;
+    height:40px;
+    margin-left:13px;
+}
+/* .icon:hover{
+    
+} */
+.icontext{
+    color:black;
+}
+
+.bar{
+    display:block;
+    height:3px;
+    width:25px;
+    margin: 5px auto;
+    /* color:black; */
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+
+/* The display for smaller screens. */
+@media(max-width: 1024px){
+    .introductory{
+        flex-direction: column;
+        align-items: center;
+    }
+    .introductory_image{
+        margin-top: 0px;
+    }
+   .nav-links{
+     gap:5px;
+   }
+   .nav-item{
+    font-weight: 250;
+   }
+   .logo{
+    font-size:20pt;
+   }
+
+}
+
+@media(max-width: 790px) {
+    .hamburger{
+        display: block;
+        padding-right: 20px;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links{
+        position: fixed;
+        right: -100%;
+        top:68px;
+        gap:0;
+        flex-direction: column;
+        background-color: black;
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin:16px 0px;
+    }
+
+    .nav-links.active{
+        right:0;
+        gap:20px;
+        
+    }
+    .icon{
+        width:25px;
+        height:25px;
+    }
+}
