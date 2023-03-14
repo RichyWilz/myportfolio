@@ -192,7 +192,9 @@ h2,h3{
         align-items: center;
     }
     .introductory_image{
-        margin-top: 0px;
+        margin-top: -15px;
+        margin-bottom: 5px;
+        /* padding:3px 3px 3px 3px; */
     }
    .nav-links{
      gap:5px;
@@ -224,12 +226,12 @@ h2,h3{
 
     .nav-links{
         position: fixed;
-        right: -100%;
+        right: -100vw;
         top:68px;
         gap:0;
         flex-direction: column;
         background-color: black;
-        width:100%;
+        width:100vw;
         text-align: center;
         transition: 0.3s;
     }
